@@ -1,0 +1,36 @@
+.mine {
+  padding: 20px;
+}
+.mine .mine_title {
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #2e74ff;
+}
+.mine .titleInfo {
+  margin: 20px 0;
+  font-size: 18px;
+  position: relative;
+}
+.mine .titleInfo::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 60%;
+  top: 20%;
+  left: -10px;
+  border-radius: 2px;
+  background-color: red;
+}
+.mine .imgsShow {
+  padding: 10px;
+  display: flex;
+}
+.mine .imgsShow .imgBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mine .imgsShow .imgBox .img_title {
+  margin-bottom: 20px;
+}

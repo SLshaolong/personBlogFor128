@@ -1,0 +1,37 @@
+.mine{
+    padding: 20px;
+    .mine_title{
+        font-size: 20px;
+        padding-bottom: 5px;
+       border-bottom: 3px solid #2e74ff;
+    }
+    .titleInfo{
+        margin: 20px 0;
+        font-size: 18px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 5px;
+            height: 60%;
+            top: 20%;
+            left: -10px;
+            border-radius: 2px;
+            background-color: red;
+        }
+    }
+    .imgsShow{
+        padding: 10px;
+        display: flex;
+
+        .imgBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .img_title{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

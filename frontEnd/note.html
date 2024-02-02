@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Blogs</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="inner">
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li  class="active"><a href="#">笔记本</a></li>
+            <li><a href="#" id="page">文档</a></li>
+            <li><a href="#" id="other">其他</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pageMain">
+        <div class="inner">
+            <div class="inner_title">
+                <img src="./img/note.png" alt="">
+                笔记本
+            </div>
+            <div class="detailsLines">
+                <div class="line_detail">
+                    <div class="line_time">
+                        2024-1-12
+                    </div>
+                    <div class="line_title" onclick="getPage(event)">
+                        标题
+                    </div>
+                    <div class="line_info">
+                        内容
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

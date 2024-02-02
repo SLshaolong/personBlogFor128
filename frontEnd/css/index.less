@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        .header {
+            height: 80px;
+            background-color: rgba(75, 94, 34, 1);
+
+            ul {
+                width: 100%;
+                display: flex;
+                height: 100%;
+
+                li {
+                    list-style: none;
+                    height: 100%;
+                    padding: 0 30px;
+                    font-family: '思源黑体';
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        color: rgba(163, 163, 163, 1);
+                    }
+
+                    &.active {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .inner {
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .mainBox {
+        .inner {
+            padding: 40px 118px 60px 120px;
+        }
+
+        .innerBox {
+            display: flex;
+            align-items: center;
+
+            .left_img {
+                width: 40%;
+
+                // height: 500px;
+                img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .right_info {
+                padding: 20px;
+                margin-left: 20px;
+                flex: 1;
+                background-image: url(../img/bac.png);
+                background-size: 60%;
+                filter: hue-rotate(78deg);
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .right_title {
+                    font-family: 'heiti';
+                    font-size: 43px;
+                    filter: hue-rotate(-78deg);
+
+                    span {
+                        color: rgba(67, 207, 124, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerContainer {
+        background-color: rgba(247, 248, 250, 1);
+        background-position: 100% 100%;
+        padding: 70px 120px 30px 120px;
+        min-height: 400px;
+        background-size: 100%;
+        .inner {
+            background-color: #fff;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 20px;
+            img{
+                max-width: 100%;
+            }
+
+            .detail {
+                overflow: hidden;
+                .time {
+                    color: rgba(128, 128, 128, 1);
+                    font-size: 14px;
+                }
+
+                .title {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 40px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #bcbcbc;
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+                .info {
+                    margin-top: 10px;
+                    max-height: 4000px;
+                    transition: all 0.5s;
+                    
+                }
+            }
+        }
+    }
+
+    .pageMain{
+        background-color: rgba(247, 248, 250, 1);
+        min-height: 80vh;
+        .inner{
+            padding: 80px 10px;
+            .inner_title{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+            }
+            .detailsLines{
+                margin: 20px 0;
+                .line_detail{
+                    background-color: #fff;
+                    margin: 20px 0;
+                    border-radius: 8px;
+                    padding: 24px 30px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    .line_time{
+                        color: rgba(128, 128, 128, 1);
+                        font: 14px;
+                    }
+                    .line_title{
+                        line-height: 30px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        user-select: none;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #eeeeee;
+                    }
+                    .line_info{
+                        transition: all 0.5s;
+                        margin-top: 10px;
+                        overflow: hidden;
+                        max-height: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+// 媒体查询 866px
+@media screen and (max-width:900px) {
+    .container{
+        .mainBox{
+            .inner{
+                padding: 20px 40px;
+                .innerBox{
+                    flex-direction: column;
+                    .left_img{
+                        width: 80%;
+                    }
+                    .right_title{
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+        .footerContainer{  padding: 20px ;
+           
+        }
+    }
+}
+@media screen and (max-width:700px) {
+    .container{
+        .mainBox{
+            .inner{
+                width: 100%;
+                padding: 20px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "easysass.formats": [
+
+      {
+          "format": "expanded",
+          // "extension": ".css"
+      }
+  ],
+  "liveServer.settings.host": "localhost",
+  "liveServer.settings.proxy": {
+      "enable": true,
+      "baseUri": "/api",
+      "proxyUri": "http://127.0.0.1:8080"//测试
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "window.zoomLevel": 0,
+}

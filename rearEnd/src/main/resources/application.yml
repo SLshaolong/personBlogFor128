@@ -1,0 +1,11 @@
+server:
+  port: 8080
+output:
+  file: "/root/testFiles/files"
+upload:
+  filePath: "/root/testFiles/imgs"
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB

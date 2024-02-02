@@ -1,0 +1,43 @@
+.blogContainer{
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    .addButton{
+        text-align: right;
+        
+    }
+    .title{
+        font-size: 18px;
+        
+    }
+    .pageList{
+        padding: 20px;
+        overflow: auto;
+        max-height: 80vh;
+        box-sizing: border-box;
+        li{
+            margin: 10px 0;
+            list-style: none;
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .3);
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            .li_title{
+                font-size: 16px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                // text-align: center;
+
+            }
+            .li_createTime{
+                font-size: 13px;
+                text-align: right;
+            }
+            .li_button_views{
+                text-align: right;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
