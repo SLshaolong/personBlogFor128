@@ -1,9 +1,9 @@
 server:
   port: 8080
 output:
-  file: "/root/testFiles/files"
+  file: "/home/level-128/personBlogFor128/server"
 upload:
-  filePath: "/root/testFiles/imgs"
+  filePath: "/home/level-128/personBlogFor128/imgs"
 spring:
   servlet:
     multipart:

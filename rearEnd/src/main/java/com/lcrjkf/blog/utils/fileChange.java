@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 
 @Component
@@ -21,6 +24,23 @@ public class fileChange {
         System.out.println(filePath);
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
+        try{
+            Path directoryPath = FileSystems.getDefault().getPath(filePath);
+            if (!Files.exists(directoryPath) || !Files.isDirectory(directoryPath)) {
+                Files.createDirectories(directoryPath);
+
+            }
+
+            // 检查文件是否存在
+            Path filePathObj = FileSystems.getDefault().getPath(filePath, fileName);
+            if (!Files.exists(filePathObj) || !Files.isRegularFile(filePathObj)) {
+                Files.createFile(filePathObj);
+                objectMapper.writeValue(new FileOutputStream(filePathObj.toFile()), Collections.emptyList());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return  Collections.emptyList();
+        }
         try (InputStream inputStream = new FileInputStream(filePath + "/" + fileName)) {
             if (inputStream != null) {
                 // 使用 TypeFactory 构建 JavaType

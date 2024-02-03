@@ -33,6 +33,7 @@ public class lcBlogController {
   /**
    * 获取设置详情
    */
+
   public ObjectNode getFileSetting(){
       ObjectMapper objectMapper = new ObjectMapper();
       ObjectNode objectNode = objectMapper.createObjectNode();
